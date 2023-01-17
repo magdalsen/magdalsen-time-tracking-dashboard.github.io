@@ -8,73 +8,63 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="./script.js" defer></script>
 </head>
 <body>
+  <main class="container">
 
-  Report for
-  Jeremy Robson
+    <section class="personal__data" id="area1">
+      <div class="area-name">
+        Report for
+        Jeremy Robson
+      </div>
+      <div class="area-buttons">
+        <button type="button" class="personal__data--daily" value="daily">Daily</button>
+        <button type="button" class="personal__data--weekly" value="weekly">Weekly</button>
+        <button type="button" class="personal__data--monthly" value="monthly">Monthly</button>
+      </div>
+    </section>
 
-  Daily
-  Weekly
-  Monthly
+    <section id="area2">
+      <div class="area-title"></div>
+      <div class="area-daily-current"></div>
+      <div class="area-daily-previous"></div>
+    </section>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <section id="area3">
+      <div class="area-title"></div>
+      <div class="area-daily-current"></div>
+      <div class="area-daily-previous"></div>
+    </section>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <section id="area4">
+      <div class="area-title"></div>
+      <div class="area-daily-current"></div>
+      <div class="area-daily-previous"></div>
+    </section>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <section id="area5">
+      <div class="area-title"></div>
+      <div class="area-daily-current"></div>
+      <div class="area-daily-previous"></div>
+    </section>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <section id="area6">
+      <div class="area-title"></div>
+      <div class="area-daily-current"></div>
+      <div class="area-daily-previous"></div>
+    </section>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+    <section id="area7">
+      <div class="area-title"></div>
+      <div class="area-daily-current"></div>
+      <div class="area-daily-previous"></div>
+    </section>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </main>
 </body>
 </html>

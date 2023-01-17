@@ -1,0 +1,16 @@
+@media (max-width: 375px) {
+    .container {
+        margin: 4rem 1rem 1rem 1rem;
+
+        .personal__data {
+            display: block;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 1rem;
+        }
+    }
+  }

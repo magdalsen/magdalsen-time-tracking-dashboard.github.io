@@ -1,0 +1,52 @@
+@media (max-width: 375px) {
+  .container {
+    margin: 4rem 1rem 1rem 1rem;
+  }
+  .container .personal__data {
+    display: block;
+  }
+  .container section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226deg, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "personal-data . . ." "personal-data . . .";
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 160px 160px;
+}
+
+section {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#area1 {
+  grid-area: personal-data;
+}
+
+/*# sourceMappingURL=style.css.map */
