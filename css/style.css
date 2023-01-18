@@ -194,6 +194,14 @@ section {
   .area-buttons button {
     margin: 1rem 1.5rem 1rem 1.5rem;
   }
+  .area-buttons:hover {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+  .area-buttons:hover button {
+    margin: 1rem 1.5rem 1rem 1.5rem;
+  }
   .area-name {
     display: flex;
   }
