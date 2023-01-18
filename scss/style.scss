@@ -38,6 +38,31 @@ body {
     'personal-data . . .';
     grid-template-columns: 200px 200px 200px 200px;
     grid-template-rows: 180px 180px;
+
+    #area1 {
+        grid-area: personal-data;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    #area2 {
+        @include backgr('../images/icon-work.svg', $light-red-work);
+    }
+    #area3 {
+        @include backgr('../images/icon-play.svg', $soft-blue-play);
+    }
+    #area4 {
+        @include backgr('../images/icon-study.svg', $light-red-study);
+    }
+    #area5 {
+        @include backgr('../images/icon-exercise.svg', $lime-green-exercise);
+    }
+    #area6 {
+        @include backgr('../images/icon-social.svg', $violet-social);
+    }
+    #area7 {
+        @include backgr('../images/icon-self-care.svg', $soft-orange-self-care);
+    }
 }
 
 section {
@@ -49,44 +74,39 @@ section {
     justify-content: flex-end;
 }
 
-#area1 {
-    grid-area: personal-data;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-#area2 {
-    @include backgr('../images/icon-work.svg', $light-red-work);
-}
-#area3 {
-    @include backgr('../images/icon-play.svg', $soft-blue-play);
-}
-#area4 {
-    @include backgr('../images/icon-study.svg', $light-red-study);
-}
-#area5 {
-    @include backgr('../images/icon-exercise.svg', $lime-green-exercise);
-}
-#area6 {
-    @include backgr('../images/icon-social.svg', $violet-social);
-}
-#area7 {
-    @include backgr('../images/icon-self-care.svg', $soft-orange-self-care);
-}
-
 .area-backg {
     border-radius: 10px;
     padding: 1rem;
-}
 
-.area-title, .area-buttons button, .dots {
-    font-size: 18px;
-    font-weight: 400;
-}
+    .area-title-dots {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-.area-daily-current {
-    font-size: 45px;
-    font-weight: 300;
+        .area-title, .area-buttons button, .dots {
+            font-size: 18px;
+            font-weight: 400;
+        }
+    
+        .area-title {
+            margin: 0rem 0.5rem 1.5rem 0.5rem;
+        }
+    
+        .dots {
+            margin: 0rem 0.5rem 0rem 0rem;
+        }
+    }
+
+    .area-data {
+        .area-daily-current {
+            font-size: 45px;
+            font-weight: 300;
+        }
+
+        .area-daily-current, .area-daily-previous {
+            margin: 0rem 0.5rem 0rem 0.5rem;
+        }
+    }
 }
 
 .area-daily-previous, .area-report {
@@ -94,45 +114,27 @@ section {
     opacity: 70%;
 }
 
-.area-actual-name {
-    margin: 0rem 1.5rem 3rem 1.5rem;
-    font-size: 35px;
-    font-weight: 300;
-}
-
-.area-title {
-    margin: 0rem 0.5rem 1.5rem 0.5rem;
-}
-
-.area-report {
-    margin: 0.5rem 1.5rem 0rem 1.5rem;
-}
-
-.area-daily-current, .area-daily-previous {
-    margin: 0rem 0.5rem 0rem 0.5rem;
-}
-
-.area-title-dots {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.dots {
-    margin: 0rem 0.5rem 0rem 0rem;
-}
-
 .area-name {
     background-color: $blue;
     border-radius: 10px;
-}
 
-.area-image img {
-    margin: 1.5rem;
-    width: 30%;
-    border-width: medium;
-    border: solid;
-    border-radius: 50%;
+    .area-image img {
+        margin: 1.5rem;
+        width: 30%;
+        border-width: medium;
+        border: solid;
+        border-radius: 50%;
+    }
+
+    .area-actual-name {
+        margin: 0rem 1.5rem 3rem 1.5rem;
+        font-size: 35px;
+        font-weight: 300;
+    }
+    
+    .area-report {
+        margin: 0.5rem 1.5rem 0rem 1.5rem;
+    }
 }
 
 .area-buttons {
@@ -140,15 +142,15 @@ section {
     flex-direction: column;
     align-items: flex-start;
     margin: 1rem;
-}
 
-.area-buttons button {
-    @include btns;
-    opacity: 70%;
-}
-
-.area-buttons button:hover {
-    @include btns;
+    & button {
+        @include btns;
+        opacity: 70%;
+    }
+    
+    & button:hover {
+        @include btns;
+    }
 }
 
 @import 'mobile';

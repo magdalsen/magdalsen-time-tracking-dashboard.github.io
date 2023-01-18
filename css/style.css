@@ -21,6 +21,53 @@ body {
   grid-template-columns: 200px 200px 200px 200px;
   grid-template-rows: 180px 180px;
 }
+.container #area1 {
+  grid-area: personal-data;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container #area2 {
+  background-image: url("../images/icon-work.svg");
+  background-color: hsl(15deg, 100%, 70%);
+  background-repeat: no-repeat;
+  background-position: bottom 16vh right 2vh;
+  background-size: 3.7rem;
+}
+.container #area3 {
+  background-image: url("../images/icon-play.svg");
+  background-color: hsl(195deg, 74%, 62%);
+  background-repeat: no-repeat;
+  background-position: bottom 16vh right 2vh;
+  background-size: 3.7rem;
+}
+.container #area4 {
+  background-image: url("../images/icon-study.svg");
+  background-color: hsl(348deg, 100%, 68%);
+  background-repeat: no-repeat;
+  background-position: bottom 16vh right 2vh;
+  background-size: 3.7rem;
+}
+.container #area5 {
+  background-image: url("../images/icon-exercise.svg");
+  background-color: hsl(145deg, 58%, 55%);
+  background-repeat: no-repeat;
+  background-position: bottom 16vh right 2vh;
+  background-size: 3.7rem;
+}
+.container #area6 {
+  background-image: url("../images/icon-social.svg");
+  background-color: hsl(264deg, 64%, 52%);
+  background-repeat: no-repeat;
+  background-position: bottom 16vh right 2vh;
+  background-size: 3.7rem;
+}
+.container #area7 {
+  background-image: url("../images/icon-self-care.svg");
+  background-color: hsl(43deg, 84%, 65%);
+  background-repeat: no-repeat;
+  background-position: bottom 16vh right 2vh;
+  background-size: 3.7rem;
+}
 
 section {
   background-color: hsl(235deg, 46%, 20%);
@@ -31,73 +78,31 @@ section {
   justify-content: flex-end;
 }
 
-#area1 {
-  grid-area: personal-data;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#area2 {
-  background-image: url("../images/icon-work.svg");
-  background-color: hsl(15deg, 100%, 70%);
-  background-repeat: no-repeat;
-  background-position: bottom 16vh right 2vh;
-  background-size: 3.7rem;
-}
-
-#area3 {
-  background-image: url("../images/icon-play.svg");
-  background-color: hsl(195deg, 74%, 62%);
-  background-repeat: no-repeat;
-  background-position: bottom 16vh right 2vh;
-  background-size: 3.7rem;
-}
-
-#area4 {
-  background-image: url("../images/icon-study.svg");
-  background-color: hsl(348deg, 100%, 68%);
-  background-repeat: no-repeat;
-  background-position: bottom 16vh right 2vh;
-  background-size: 3.7rem;
-}
-
-#area5 {
-  background-image: url("../images/icon-exercise.svg");
-  background-color: hsl(145deg, 58%, 55%);
-  background-repeat: no-repeat;
-  background-position: bottom 16vh right 2vh;
-  background-size: 3.7rem;
-}
-
-#area6 {
-  background-image: url("../images/icon-social.svg");
-  background-color: hsl(264deg, 64%, 52%);
-  background-repeat: no-repeat;
-  background-position: bottom 16vh right 2vh;
-  background-size: 3.7rem;
-}
-
-#area7 {
-  background-image: url("../images/icon-self-care.svg");
-  background-color: hsl(43deg, 84%, 65%);
-  background-repeat: no-repeat;
-  background-position: bottom 16vh right 2vh;
-  background-size: 3.7rem;
-}
-
 .area-backg {
   border-radius: 10px;
   padding: 1rem;
 }
-
-.area-title, .area-buttons button, .dots {
+.area-backg .area-title-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.area-backg .area-title-dots .area-title, .area-backg .area-title-dots .area-buttons button, .area-backg .area-title-dots .dots {
   font-size: 18px;
   font-weight: 400;
 }
-
-.area-daily-current {
+.area-backg .area-title-dots .area-title {
+  margin: 0rem 0.5rem 1.5rem 0.5rem;
+}
+.area-backg .area-title-dots .dots {
+  margin: 0rem 0.5rem 0rem 0rem;
+}
+.area-backg .area-data .area-daily-current {
   font-size: 45px;
   font-weight: 300;
+}
+.area-backg .area-data .area-daily-current, .area-backg .area-data .area-daily-previous {
+  margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
 .area-daily-previous, .area-report {
@@ -105,45 +110,24 @@ section {
   opacity: 70%;
 }
 
-.area-actual-name {
-  margin: 0rem 1.5rem 3rem 1.5rem;
-  font-size: 35px;
-  font-weight: 300;
-}
-
-.area-title {
-  margin: 0rem 0.5rem 1.5rem 0.5rem;
-}
-
-.area-report {
-  margin: 0.5rem 1.5rem 0rem 1.5rem;
-}
-
-.area-daily-current, .area-daily-previous {
-  margin: 0rem 0.5rem 0rem 0.5rem;
-}
-
-.area-title-dots {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.dots {
-  margin: 0rem 0.5rem 0rem 0rem;
-}
-
 .area-name {
   background-color: hsl(246deg, 80%, 60%);
   border-radius: 10px;
 }
-
-.area-image img {
+.area-name .area-image img {
   margin: 1.5rem;
   width: 30%;
   border-width: medium;
   border: solid;
   border-radius: 50%;
+}
+.area-name .area-actual-name {
+  margin: 0rem 1.5rem 3rem 1.5rem;
+  font-size: 35px;
+  font-weight: 300;
+}
+.area-name .area-report {
+  margin: 0.5rem 1.5rem 0rem 1.5rem;
 }
 
 .area-buttons {
@@ -152,14 +136,12 @@ section {
   align-items: flex-start;
   margin: 1rem;
 }
-
 .area-buttons button {
   all: unset;
   cursor: pointer;
   margin: 0.3rem;
   opacity: 70%;
 }
-
 .area-buttons button:hover {
   all: unset;
   cursor: pointer;
@@ -174,17 +156,17 @@ section {
   .container {
     display: block;
   }
-  section {
-    position: relative;
-    top: 27px;
-  }
-  #area1 {
+  .container #area1 {
     margin: 0rem 1rem 1rem 1rem;
     background-position: bottom 14vh right 2vh;
   }
-  #area2, #area3, #area4, #area5, #area6, #area7 {
+  .container #area2, .container #area3, .container #area4, .container #area5, .container #area6, .container #area7 {
     margin: 0rem 1rem 3rem 1rem;
     background-position: bottom 14vh right 2vh;
+  }
+  section {
+    position: relative;
+    top: 27px;
   }
   .area-buttons {
     display: block;
@@ -205,7 +187,7 @@ section {
   .area-name {
     display: flex;
   }
-  .area-image img {
+  .area-name .area-image img {
     width: 55%;
   }
   .area-data {

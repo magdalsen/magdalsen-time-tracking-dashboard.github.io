@@ -18,6 +18,16 @@ $bottom-right-position: bottom 14vh right 2vh;
 
     .container {
         display: block;
+
+        #area1 {
+            margin: 0rem 1rem 1rem 1rem;
+            background-position: $bottom-right-position;
+        }
+    
+        #area2, #area3, #area4, #area5, #area6, #area7 {
+            margin: 0rem 1rem 3rem 1rem;
+            background-position: $bottom-right-position;
+        }
     }
 
     section {
@@ -25,29 +35,20 @@ $bottom-right-position: bottom 14vh right 2vh;
         top: 27px;
     }
 
-    #area1 {
-        margin: 0rem 1rem 1rem 1rem;
-        background-position: $bottom-right-position;
-    }
-
-    #area2, #area3, #area4, #area5, #area6, #area7 {
-        margin: 0rem 1rem 3rem 1rem;
-        background-position: $bottom-right-position;
-    }
-
     .area-buttons {
         @include btns;
-    }
-    .area-buttons:hover {
-        @include btns;
+
+        &:hover {
+            @include btns;
+        }
     }
 
     .area-name {
         display: flex;
-    }
 
-    .area-image img {
-        width: 55%;
+        .area-image img {
+            width: 55%;
+        }
     }
 
     .area-data {
