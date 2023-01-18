@@ -18,6 +18,7 @@ fetch('./data.json')
             title[i].innerHTML = getTitle[i];
         };
 
+        //set time
         const setTime = (getTime, getTimePrev) => {
             for (let i=0;i<=dailyCurrent.length-1;i++) {
                 dailyCurrent[i].innerHTML = getTime[i];
@@ -25,7 +26,6 @@ fetch('./data.json')
             };
         }
 
-        //set time
         const dailyValue = () => {
             const getTime = json.map(el => {
                 return `${el.timeframes.daily.current}hrs`;

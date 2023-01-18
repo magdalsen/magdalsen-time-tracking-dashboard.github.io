@@ -1,16 +1,50 @@
+$bottom-right-position: bottom 14vh right 2vh;
+
 @media (max-width: 375px) {
-    .container {
+    body {
+        display: block;
         margin: 4rem 1rem 1rem 1rem;
+    }
 
-        .personal__data {
-            display: block;
-        }
+    .container {
+        display: block;
+    }
 
-        section {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin: 1rem;
+    section {
+        position: relative;
+        top: 27px;
+    }
+
+    #area1 {
+        margin: 0rem 1rem 1rem 1rem;
+        background-position: $bottom-right-position;
+    }
+
+    #area2, #area3, #area4, #area5, #area6, #area7 {
+        margin: 0rem 1rem 3rem 1rem;
+        background-position: $bottom-right-position;
+    }
+
+    .area-buttons {
+        display: block;
+        text-align: center;
+        margin: 0;
+
+        & button {
+            margin: 1rem 1.5rem 1rem 1.5rem;
         }
+    }
+    .area-name {
+        display: flex;
+    }
+
+    .area-image img {
+        width: 55%;
+    }
+
+    .area-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
   }
