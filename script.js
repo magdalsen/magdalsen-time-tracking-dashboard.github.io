@@ -27,6 +27,7 @@ fetch('./data.json')
         }
 
         const dailyValue = () => {
+            weeklyBtn.style.opacity = '0.7';
             const getTime = json.map(el => {
                 return `${el.timeframes.daily.current}hrs`;
             });
@@ -35,9 +36,9 @@ fetch('./data.json')
             });
             setTime(getTime, getTimePrev);
         }
-        dailyValue();
         
         const weeklyValue = () => {
+            weeklyBtn.style.opacity = '100';
             const getTime = json.map(el => {
                 return `${el.timeframes.weekly.current}hrs`;
             });
@@ -46,8 +47,10 @@ fetch('./data.json')
             });
             setTime(getTime, getTimePrev);
         }
+        weeklyValue();
 
         const monthlyValue = () => {
+            weeklyBtn.style.opacity = '0.7';
             const getTime = json.map(el => {
                 return `${el.timeframes.monthly.current}hrs`;
             });

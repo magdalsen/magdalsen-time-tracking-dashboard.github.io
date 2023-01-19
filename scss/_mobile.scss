@@ -1,9 +1,9 @@
 $bottom-right-position: bottom 14vh right 2vh;
 
 @mixin btns {
-    display: block;
-    text-align: center;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     & button {
         margin: 1rem 1.5rem 1rem 1.5rem;
@@ -35,12 +35,8 @@ $bottom-right-position: bottom 14vh right 2vh;
         top: 27px;
     }
 
-    .area-buttons {
+    .area-buttons, .area-buttons:hover {
         @include btns;
-
-        &:hover {
-            @include btns;
-        }
     }
 
     .area-name {
@@ -55,5 +51,9 @@ $bottom-right-position: bottom 14vh right 2vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .area-daily-previous {
+            text-align: right;
+        }
     }
   }
