@@ -8,7 +8,7 @@ const monthlyBtn = document.querySelector('.personal__data--monthly');
 fetch('./data.json')
     .then((response) => response.json())
     .then((json) => {
-        
+
         //set title
         const getTitle = json.map(el => {
             return el.title;
@@ -26,38 +26,28 @@ fetch('./data.json')
             };
         }
 
-        const dailyValue = () => {
-            weeklyBtn.style.opacity = '0.7';
+        const setValue = (time, when, opacity) => {
+            weeklyBtn.style.opacity = opacity;
             const getTime = json.map(el => {
-                return `${el.timeframes.daily.current}hrs`;
+                return `${el.timeframes[time].current}hrs`;
             });
             const getTimePrev = json.map(el => {
-                return `Last Day - ${el.timeframes.daily.previous}hrs`;
+                return `Last ${when} - ${el.timeframes[time].previous}hrs`;
             });
             setTime(getTime, getTimePrev);
         }
+
+        const dailyValue = () => {
+            setValue('daily', 'Day', '');
+        }
         
         const weeklyValue = () => {
-            weeklyBtn.style.opacity = '100';
-            const getTime = json.map(el => {
-                return `${el.timeframes.weekly.current}hrs`;
-            });
-            const getTimePrev = json.map(el => {
-                return `Last Week - ${el.timeframes.weekly.previous}hrs`;
-            });
-            setTime(getTime, getTimePrev);
+            setValue('weekly', 'Week', '1');
         }
         weeklyValue();
 
         const monthlyValue = () => {
-            weeklyBtn.style.opacity = '0.7';
-            const getTime = json.map(el => {
-                return `${el.timeframes.monthly.current}hrs`;
-            });
-            const getTimePrev = json.map(el => {
-                return `Last Month - ${el.timeframes.monthly.previous}hrs`;
-            });
-            setTime(getTime, getTimePrev);
+            setValue('monthly', 'Month', '');
         }
         
         dailyBtn.addEventListener('click', dailyValue);

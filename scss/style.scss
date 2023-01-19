@@ -36,8 +36,8 @@ body {
     grid-template-areas:
     'personal-data . . .'
     'personal-data . . .';
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 180px 180px;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 180px);
 
     #area1 {
         grid-area: personal-data;
@@ -111,7 +111,7 @@ section {
 
 .area-daily-previous, .area-report {
     font-size: 13px;
-    opacity: 70%;
+    opacity: 0.7;
 }
 
 .area-name {
@@ -145,11 +145,12 @@ section {
 
     & button {
         @include btns;
-        opacity: 70%;
+        opacity: 0.7;
     }
-    
-    & button:hover {
+
+    & button:hover, & button:focus {
         @include btns;
+        opacity: 1;
     }
 }
 
