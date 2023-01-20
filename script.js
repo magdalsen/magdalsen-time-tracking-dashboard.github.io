@@ -14,16 +14,23 @@ fetch('./data.json')
             return el.title;
         });
 
-        for (let i=0;i<=title.length-1;i++) {
-            title[i].innerHTML = getTitle[i];
-        };
+        Array.from(title).map((el, i) => {
+            el.innerHTML = getTitle[i];
+        });
 
         //set time
         const setTime = (getTime, getTimePrev) => {
-            for (let i=0;i<=dailyCurrent.length-1;i++) {
-                dailyCurrent[i].innerHTML = getTime[i];
-                dailyPrevious[i].innerHTML = getTimePrev[i];
-            };
+            Array.from(dailyCurrent).map((el, i) => {
+                el.innerHTML = getTime[i];
+            });
+            Array.from(dailyPrevious).map((el, i) => {
+                el.innerHTML = getTimePrev[i];
+            })
+            //the same but using for loop
+            // for (let i=0;i<=dailyCurrent.length-1;i++) {
+            //     dailyCurrent[i].innerHTML = getTime[i];
+            //     dailyPrevious[i].innerHTML = getTimePrev[i];
+            // };
         }
 
         const setValue = (time, when, opacity) => {
