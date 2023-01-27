@@ -1,6 +1,6 @@
-const title = document.querySelectorAll('.area-title');
-const dailyCurrent = document.querySelectorAll('.area-daily-current');
-const dailyPrevious = document.querySelectorAll('.area-daily-previous');
+const title = Array.from(document.querySelectorAll('.area-title'));
+const dailyCurrent = Array.from(document.querySelectorAll('.area-daily-current'));
+const dailyPrevious = Array.from(document.querySelectorAll('.area-daily-previous'));
 const dailyBtn = document.querySelector('.personal__data--daily');
 const weeklyBtn = document.querySelector('.personal__data--weekly');
 const monthlyBtn = document.querySelector('.personal__data--monthly');
@@ -10,20 +10,20 @@ fetch('./data.json')
     .then((json) => {
 
         //set title
-        const getTitle = json.map(el => {
+        const boxTitles = json.map(el => {
             return el.title;
         });
 
-        Array.from(title).map((el, i) => {
-            el.innerHTML = getTitle[i];
+        title.map((el, i) => {
+            el.innerHTML = boxTitles[i];
         });
 
         //set time
         const setTime = (getTime, getTimePrev) => {
-            Array.from(dailyCurrent).map((el, i) => {
+            dailyCurrent.map((el, i) => {
                 el.innerHTML = getTime[i];
             });
-            Array.from(dailyPrevious).map((el, i) => {
+            dailyPrevious.map((el, i) => {
                 el.innerHTML = getTimePrev[i];
             })
             //the same but using for loop
@@ -35,13 +35,13 @@ fetch('./data.json')
 
         const setValue = (time, when, opacity) => {
             weeklyBtn.style.opacity = opacity;
-            const getTime = json.map(el => {
+            const activityTime = json.map(el => {
                 return `${el.timeframes[time].current}hrs`;
             });
-            const getTimePrev = json.map(el => {
+            const prevActivityTime = json.map(el => {
                 return `Last ${when} - ${el.timeframes[time].previous}hrs`;
             });
-            setTime(getTime, getTimePrev);
+            setTime(activityTime, prevActivityTime);
         }
 
         const dailyValue = () => {
